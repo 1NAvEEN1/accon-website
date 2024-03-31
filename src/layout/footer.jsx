@@ -14,10 +14,10 @@ const Footer = ({ pages }) => {
   return (
     <Box
       sx={{
-        bgcolor: "#090D10",
-        pt: 12,
-        pr: 15,
-        pl: 15,
+        bgcolor: "secondary.main",
+        pt: 5,
+        pr: 5,
+        pl: 5,
         pb: 5,
       }}
     >
@@ -25,16 +25,37 @@ const Footer = ({ pages }) => {
       <Grid container>
         <Grid
           item
+          xs={12}
           lg={3}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
           mt={5}
         >
-          <img src={LogoFooter} />
+          {/* <img src={LogoFooter} /> */}
+          <Box>
+            <Typography color={"white"} variant="h2" textAlign={"center"}>
+              ACCON
+            </Typography>
+            <Typography
+              color={"primary.main"}
+              mt={-1}
+              textAlign={"center"}
+              fontWeight={500}
+              variant="h4"
+            >
+              Engineering PVT
+            </Typography>
+          </Box>
+          <Box display={{ lg: "none", xs: "flex" }} mt={2}>
+            <Contacts />
+          </Box>
         </Grid>
-        <Grid item lg={2} display={"flex"} justifyContent={"center"} mt={5}>
-          <Grid container spacing={4} width={50}>
+        <Grid
+          item
+          lg={3}
+          display={{ xs: "none", lg: "flex" }}
+          justifyContent={"center"}
+          mt={5}
+        >
+          <Grid container spacing={4} width={120}>
             {pages.map((page, key) => (
               <Grid
                 item
@@ -55,102 +76,20 @@ const Footer = ({ pages }) => {
         </Grid>
         <Grid
           item
-          lg={7}
-          display={"flex"}
+          lg={6}
+          display={{ xs: "none", lg: "flex" }}
           justifyContent={"center"}
           alignItems={"center"}
           mt={1}
         >
-          <Grid container color={"white"} height={180}>
-            <Grid
-              item
-              xs={1.5}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <IconButton>
-                <a
-                  href="https://www.google.com/maps"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LocationOnIcon
-                    sx={{ color: "white", ":hover": { color: "primary.main" } }}
-                    fontSize="large"
-                  />
-                </a>
-              </IconButton>
-            </Grid>
-            <Grid
-              item
-              xs={10.5}
-              display={"flex"}
-              justifyContent={"start"}
-              alignItems={"center"}
-            >
-              <Typography>
-                345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              xs={1.5}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <IconButton>
-                <a href="tel:+94770491496">
-                  <PhoneIcon
-                    sx={{ color: "white", ":hover": { color: "primary.main" } }}
-                    fontSize="large"
-                  />
-                </a>
-              </IconButton>
-            </Grid>
-            <Grid
-              item
-              xs={10.5}
-              display={"flex"}
-              justifyContent={"start"}
-              alignItems={"center"}
-            >
-              <Typography>(123) 456-7890</Typography>
-            </Grid>
-            <Grid
-              item
-              xs={1.5}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <IconButton>
-                <a href="mailto:rukmadura@gmail.com">
-                  <PrintIcon
-                    sx={{ color: "white", ":hover": { color: "primary.main" } }}
-                    fontSize="large"
-                  />
-                </a>
-              </IconButton>
-            </Grid>
-            <Grid
-              item
-              xs={10.5}
-              display={"flex"}
-              justifyContent={"start"}
-              alignItems={"center"}
-            >
-              <Typography>vijay@drumscafe.com.au</Typography>
-            </Grid>
-          </Grid>
+          <Contacts />
         </Grid>
         <Grid
           item
           xs={12}
           lg={12}
           display={"flex"}
-          justifyContent={"end"}
+          justifyContent={{ xs: "center",sm:"end", lg: "end" }}
           alignItems={"center"}
           mt={1}
           gap={2}
@@ -195,19 +134,133 @@ const Footer = ({ pages }) => {
           </IconButton>
         </Grid>
       </Grid>
+      <Grid
+          item
+          xs={12}
+          display={{ lg: "none", xs: "flex" }}
+          justifyContent={"center"}
+        >
+          <Grid container spacing={2} mb={2}>
+            {pages.map((page, key) => (
+              <Grid
+                item
+                key={key}
+                xs={4}
+                md={2}
+                sx={{
+                  color: "white",
+                  ":hover": {
+                    cursor: "pointer",
+                    color: "primary.main",
+                  },
+                }}
+              >
+                <Typography textAlign={"center"}>{page.name}</Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
       <Divider sx={{ bgcolor: "#979797" }} />
-      <Typography color={"white"} textAlign={"end"} mt={4}>
-        COPYRIGHT ©2024 DRUMS - POWERED BY{" "}
+      <Typography color={"white"} textAlign={"start"} mt={4}>
+        COPYRIGHT ©2024 ACCON - POWERED BY{" "}
         <a
-          href="https://www.instagram.com/"
+          href="https://github.com/1NAvEEN1"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "#FE760F" }}
         >
-          VARIENTX
+          1NAvEEN1
         </a>
       </Typography>
     </Box>
+  );
+};
+
+const Contacts = () => {
+  return (
+    <Grid container color={"white"} height={180}>
+      <Grid
+        item
+        xs={1.5}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <IconButton>
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LocationOnIcon
+              sx={{ color: "white", ":hover": { color: "primary.main" } }}
+              fontSize="large"
+            />
+          </a>
+        </IconButton>
+      </Grid>
+      <Grid
+        item
+        xs={10.5}
+        display={"flex"}
+        justifyContent={"start"}
+        alignItems={"center"}
+      >
+        <Typography>
+          345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
+        </Typography>
+      </Grid>
+      <Grid
+        item
+        xs={1.5}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <IconButton>
+          <a href="tel:+94770491496">
+            <PhoneIcon
+              sx={{ color: "white", ":hover": { color: "primary.main" } }}
+              fontSize="large"
+            />
+          </a>
+        </IconButton>
+      </Grid>
+      <Grid
+        item
+        xs={10.5}
+        display={"flex"}
+        justifyContent={"start"}
+        alignItems={"center"}
+      >
+        <Typography>(123) 456-7890</Typography>
+      </Grid>
+      <Grid
+        item
+        xs={1.5}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <IconButton>
+          <a href="mailto:rukmadura@gmail.com">
+            <PrintIcon
+              sx={{ color: "white", ":hover": { color: "primary.main" } }}
+              fontSize="large"
+            />
+          </a>
+        </IconButton>
+      </Grid>
+      <Grid
+        item
+        xs={10.5}
+        display={"flex"}
+        justifyContent={"start"}
+        alignItems={"center"}
+      >
+        <Typography>acconengineering@gmail.com</Typography>
+      </Grid>
+    </Grid>
   );
 };
 

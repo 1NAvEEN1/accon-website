@@ -101,12 +101,29 @@ function MainHeader(props) {
                 display: { xs: "flex", lg: "none" },
               }}
             >
-              <Grid item xs={3} pt={1} pl={2}>
-                <img src={LogoHeading} width={60} />
+              <Grid item xs={5} pt={1} pl={2} display={"flex"} justifyContent={"center"}>
+                {/* <img src={LogoHeading} /> */}
+                <Box>
+                  <Typography
+                    color={"secondary.main"}
+                    variant="h3"
+                    textAlign={"center"}
+                  >
+                    ACCON
+                  </Typography>
+                  <Typography
+                    color={"primary.main"}
+                    mt={-1}
+                    textAlign={"center"}
+                    fontWeight={500}
+                  >
+                    Engineering PVT
+                  </Typography>
+                </Box>
               </Grid>
               <Grid
                 item
-                xs={9}
+                xs={7}
                 display={"flex"}
                 justifyContent={"end"}
                 alignItems={"center"}
@@ -197,7 +214,7 @@ function MainHeader(props) {
                         xs={2}
                         key={page.name}
                         sx={{
-                          bgcolor:"transparent",
+                          bgcolor: "transparent",
                           borderRadius: 2,
                           width: 120,
                           p: 0.1,
@@ -272,7 +289,11 @@ function MainHeader(props) {
           },
         }}
         PaperProps={{
-          sx: { width: 300, backgroundColor: "transparent" },
+          sx: {
+            width: 300,
+            backgroundColor: "rgb(255, 255, 255, 0.3)",
+            backdropFilter: "blur(7px)",
+          },
         }}
       >
         <Grid
@@ -289,7 +310,24 @@ function MainHeader(props) {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <img src={LogoHeading} width={80} />
+            <Box>
+              <Typography
+                color={"secondary.main"}
+                variant="h2"
+                textAlign={"center"}
+              >
+                ACCON
+              </Typography>
+              <Typography
+                color={"primary.main"}
+                mt={-1}
+                textAlign={"center"}
+                fontWeight={500}
+                variant="h6"
+              >
+                Engineering PVT
+              </Typography>
+            </Box>
           </Grid>
           <Grid
             item
@@ -306,7 +344,7 @@ function MainHeader(props) {
                   key={page.name}
                   sx={{
                     bgcolor:
-                      urlLocation == page.path ? "primary.main" : "#d3dcd7",
+                      urlLocation == page.path ? "primary.main" : "#e6e7e8",
                     borderRadius: 1,
                     height: page.subMenus ? 235 : 40,
                     mr: 2,
@@ -346,7 +384,10 @@ function MainHeader(props) {
             </Grid>
           </Grid>
           <Grid item>
-            <IconButton sx={{ boxShadow: 5 }} onClick={toggleDrawer}>
+            <IconButton
+              sx={{ boxShadow: 5, bgcolor: "#e6e7e8" }}
+              onClick={toggleDrawer}
+            >
               <ArrowForwardIosIcon />
             </IconButton>
           </Grid>
