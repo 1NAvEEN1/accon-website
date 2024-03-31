@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
-import BackGroundImage from "../../assets/Home/HomeBG.png";
+import BackGroundImage from "../../assets/Home/HomeBG.jpg";
 
 const Home = () => {
   return (

@@ -17,6 +17,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import LogoHeading from "../assets/LogoHeading.png";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -86,10 +87,11 @@ function MainHeader(props) {
         <AppBar
           sx={{
             boxShadow: "none",
-            background: "transparent",
+            background: "White",
             position: "fixed",
             top: 0,
-            pt: 3,
+            pt: 1,
+            pb: 1,
           }}
         >
           <Toolbar disableGutters>
@@ -102,7 +104,14 @@ function MainHeader(props) {
               <Grid item xs={3} pt={1} pl={2}>
                 <img src={LogoHeading} width={60} />
               </Grid>
-              <Grid item xs={9} display={"flex"} justifyContent={"end"} alignItems={"center"} pr={3}>
+              <Grid
+                item
+                xs={9}
+                display={"flex"}
+                justifyContent={"end"}
+                alignItems={"center"}
+                pr={3}
+              >
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -155,7 +164,22 @@ function MainHeader(props) {
             >
               <Grid item lg={2} pl={2}>
                 <Box>
-                  <img src={LogoHeading} />
+                  {/* <img src={LogoHeading} /> */}
+                  <Typography
+                    color={"secondary.main"}
+                    variant="h3"
+                    textAlign={"center"}
+                  >
+                    ACCON
+                  </Typography>
+                  <Typography
+                    color={"primary.main"}
+                    mt={-1.5}
+                    textAlign={"center"}
+                    fontWeight={500}
+                  >
+                    Engineering PVT
+                  </Typography>
                 </Box>
               </Grid>
               <Grid
@@ -165,54 +189,45 @@ function MainHeader(props) {
                 justifyContent={"center"}
                 alignItems={"center"}
               >
-                <Box
-                  sx={{
-                    border: 2,
-                    borderColor: "#FFFFFF1A",
-                    borderRadius: "18px",
-                    display: "flex",
-                    p: 0.1,
-                    backdropFilter: "blur(7px)",
-                  }}
-                >
+                <Box>
                   <Grid container>
                     {props.pages.map((page) => (
                       <Grid
                         item
-                        xs={2.4}
+                        xs={2}
                         key={page.name}
                         sx={{
-                          bgcolor:
-                            urlLocation == page.path
-                              ? "primary.main"
-                              : "transparent",
-                          borderRadius: "15px",
-                          height: 40,
+                          bgcolor:"transparent",
+                          borderRadius: 2,
                           width: 120,
-                          p: 1,
+                          p: 0.1,
                           cursor:
                             urlLocation == page.path ? "default" : "pointer",
+                          boxShadow: "none",
                         }}
                         id="basic-button"
                         onClick={() => handleNavigation(page.path)}
                       >
                         <Typography
                           variant="button"
-                          fontSize={12}
+                          fontSize={15}
                           sx={{
-                            color: "white",
+                            color:
+                              urlLocation == page.path
+                                ? "primary.main"
+                                : "secondary.main",
 
                             ":hover": {
                               color:
                                 urlLocation == page.path
-                                  ? "white"
+                                  ? "primary.main"
                                   : "primary.main",
                             },
-                            fontWeight: urlLocation == page.path ? 600 : 400,
+                            fontWeight: 500,
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            pt: 0.3,
+                            pt: 0,
                           }}
                         >
                           {page.name}
@@ -230,8 +245,13 @@ function MainHeader(props) {
                 alignItems={"center"}
               >
                 <Button>
-                  <Typography fontSize={17} fontWeight={600} color={"white"}>
-                    +94 77024094
+                  <Typography
+                    fontSize={17}
+                    fontWeight={600}
+                    color={"primary.main"}
+                    display={"flex"}
+                  >
+                    <PhoneIcon /> +94 77 024 2094
                   </Typography>
                 </Button>
               </Grid>

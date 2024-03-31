@@ -6,7 +6,9 @@ import { pxToRem, responsiveFontSizes } from "../utils/getFontValue";
 // const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
 
 const typography = {
-  fontFamily: ["Inter", "Forum"].join(","),
+  fontFamily: [
+    "Poppins",
+  ].join(","),
   fontSize: 12,
   fontWeightRegular: 400,
   fontWeightMedium: 600,

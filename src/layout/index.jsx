@@ -10,13 +10,11 @@ import Fade from "@mui/material/Fade";
 
 const pages = [
   { name: "Home", path: "home" },
-  {
-    name: "About",
-    path: "about",
-  },
-  { name: "Menu", path: "menu" },
+  { name: "Services", path: "services" },
+  { name: "Projects", path: "projects" },
+  { name: "About Us", path: "about"},
   { name: "Gallery", path: "gallery" },
-  { name: "Contact", path: "contact" },
+  { name: "Contact Us", path: "contact" },
 ];
 
 function ScrollTop({ children }) {
@@ -47,7 +45,7 @@ const Layout = () => {
   return (
     <div>
       <MainHeader pages={pages} />
-      <Box minHeight={"60svh"}>
+      <Box minHeight={"60svh"} mt={10}>
         <Outlet />
       </Box>
       <Footer pages={pages} />
