@@ -79,6 +79,7 @@ function MainHeader(props) {
     if (!firstPath) {
       navigate("home");
     }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   return (
@@ -101,7 +102,14 @@ function MainHeader(props) {
                 display: { xs: "flex", lg: "none" },
               }}
             >
-              <Grid item xs={5} pt={1} pl={2} display={"flex"} justifyContent={"center"}>
+              <Grid
+                item
+                xs={5}
+                pt={1}
+                pl={2}
+                display={"flex"}
+                justifyContent={"center"}
+              >
                 {/* <img src={LogoHeading} /> */}
                 <Box>
                   <Typography
