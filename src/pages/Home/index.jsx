@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import BackGroundImage from "../../assets/Home/HomeBG.jpg";
 import Icon1 from "../../assets/icon1.png";
 import Icon2 from "../../assets/icon2.png";
@@ -9,6 +12,8 @@ import ServiceIcon1 from "../../assets/serviceIcon1.png";
 import ServiceIcon2 from "../../assets/serviceIcon2.png";
 
 const Home = () => {
+  AOS.init({ duration: 1000 });
+
   return (
     <Box
       sx={{
@@ -43,7 +48,7 @@ const Home = () => {
               justifyContent={"center"}
               alignItems={"end"}
             >
-              <Box>
+              <Box data-aos="fade-down">
                 <Typography
                   variant="h3"
                   letterSpacing={0}
@@ -69,6 +74,8 @@ const Home = () => {
       </Box>
       <Box display={"flex"} justifyContent={"center"} alignItems={"end"}>
         <Grid
+          data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
           container
           spacing={2}
           sx={{
@@ -81,7 +88,14 @@ const Home = () => {
             ml: 0,
           }}
         >
-          <Grid item xs={12} lg={4} mt={{ xs: 0, lg: -2 }}>
+          <Grid
+            item
+            xs={12}
+            lg={4}
+            mt={{ xs: 0, lg: -2 }}
+            data-aos="zoom-in"
+            data-aos-anchor-placement="center-bottom"
+          >
             <Box display={"flex"} justifyContent={"center"}>
               <Box component={"img"} src={Icon1} />
             </Box>
@@ -98,7 +112,14 @@ const Home = () => {
               which sea, over fowl doesn't.
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={4} mt={{ xs: 3, lg: -2 }}>
+          <Grid
+            item
+            xs={12}
+            lg={4}
+            mt={{ xs: 3, lg: -2 }}
+            data-aos="zoom-in"
+            data-aos-anchor-placement="top-bottom"
+          >
             <Box display={"flex"} justifyContent={"center"}>
               <Box component={"img"} src={Icon2} />
             </Box>
@@ -116,7 +137,7 @@ const Home = () => {
               which sea, over fowl doesn't.
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={4} mt={{ xs: 3, lg: -2 }}>
+          <Grid item xs={12} lg={4} mt={{ xs: 3, lg: -2 }} data-aos="zoom-in">
             <Box display={"flex"} justifyContent={"center"}>
               <Box component={"img"} src={Icon3} width={64} />
             </Box>
@@ -179,9 +200,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box mt={5}>
-
-      </Box>
+      <Box mt={5}></Box>
     </Box>
   );
 };
@@ -193,6 +212,8 @@ const ServiceCard = ({ icon, title, text }) => {
       spacing={1}
       width={320}
       sx={{ boxShadow: 3, p: 2, pt: 0, mt: { xs: 2, lg: 0 } }}
+      data-aos="zoom-in"
+      data-aos-anchor-placement="center-bottom"
     >
       <Grid item xs={3} display={"flex"} alignItems={"center"}>
         <Box component={"img"} src={icon} width={64} />
