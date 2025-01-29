@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import MainHeader from "./MainHeader";
 import Footer from "./footer";
@@ -42,19 +42,29 @@ function ScrollTop({ children }) {
 }
 
 const Layout = () => {
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 500);
+  }
   return (
-    <div>
-      <MainHeader pages={pages} />
-      <Box minHeight={"60svh"} mt={10}>
-        <Outlet />
-      </Box>
-      <Footer pages={pages} />
-      <ScrollTop>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-    </div>
+    !loading && (
+      <div>
+        <MainHeader pages={pages} />
+        <Box minHeight={"60svh"} sx={{ overflowX: "hidden" }}>
+          <Outlet />
+        </Box>
+        <Footer pages={pages} />
+        <ScrollTop>
+          <Fab size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
+      </div>
+    )
   );
 };
 

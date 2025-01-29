@@ -88,7 +88,7 @@ function MainHeader(props) {
         <AppBar
           sx={{
             boxShadow: "none",
-            background: "White",
+            background: "#131212",
             position: "fixed",
             top: 0,
             pt: 1,
@@ -179,108 +179,113 @@ function MainHeader(props) {
                 </Menu>
               </Grid>
             </Grid>
-            <Grid
-              container
-              sx={{
-                display: { xs: "none", lg: "flex" },
-                pl: 5,
-                pr: 8,
-              }}
+            <Box
+              sx={{ width: "100%", display: "flex", justifyContent: "center" }}
             >
-              <Grid item lg={2} pl={2}>
-                <Box>
-                  {/* <img src={LogoHeading} /> */}
-                  <Typography
-                    color={"secondary.main"}
-                    variant="h3"
-                    textAlign={"center"}
-                  >
-                    ACCON
-                  </Typography>
-                  <Typography
-                    color={"primary.main"}
-                    mt={-1.5}
-                    textAlign={"center"}
-                    fontWeight={500}
-                  >
-                    Engineering PVT
-                  </Typography>
-                </Box>
-              </Grid>
               <Grid
-                item
-                lg={8}
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
+                container
+                sx={{
+                  display: { xs: "none", lg: "flex" },
+                  pl: 5,
+                  pr: 8,
+                  maxWidth: 1800,
+                }}
               >
-                <Box>
-                  <Grid container>
-                    {props.pages.map((page) => (
-                      <Grid
-                        item
-                        xs={2}
-                        key={page.name}
-                        sx={{
-                          bgcolor: "transparent",
-                          borderRadius: 2,
-                          width: 120,
-                          p: 0.1,
-                          cursor:
-                            urlLocation == page.path ? "default" : "pointer",
-                          boxShadow: "none",
-                        }}
-                        id="basic-button"
-                        onClick={() => handleNavigation(page.path)}
-                      >
-                        <Typography
-                          variant="button"
-                          fontSize={15}
+                <Grid item lg={2} pl={2}>
+                  <Box>
+                    {/* <img src={LogoHeading} /> */}
+                    <Typography
+                      color={"primary.main"}
+                      variant="h3"
+                      textAlign={"center"}
+                    >
+                      ACCON
+                    </Typography>
+                    <Typography
+                      color={"white"}
+                      mt={-1.5}
+                      textAlign={"center"}
+                      fontWeight={500}
+                    >
+                      Engineering PVT
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  lg={8}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                >
+                  <Box>
+                    <Grid container>
+                      {props.pages.map((page) => (
+                        <Grid
+                          item
+                          xs={2}
+                          key={page.name}
                           sx={{
-                            color:
-                              urlLocation == page.path
-                                ? "primary.main"
-                                : "secondary.main",
-
-                            ":hover": {
+                            bgcolor: "transparent",
+                            borderRadius: 2,
+                            width: 120,
+                            p: 0.1,
+                            cursor:
+                              urlLocation == page.path ? "default" : "pointer",
+                            boxShadow: "none",
+                          }}
+                          id="basic-button"
+                          onClick={() => handleNavigation(page.path)}
+                        >
+                          <Typography
+                            variant="button"
+                            fontSize={15}
+                            sx={{
                               color:
                                 urlLocation == page.path
                                   ? "primary.main"
-                                  : "primary.main",
-                            },
-                            fontWeight: 500,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            pt: 0,
-                          }}
-                        >
-                          {page.name}
-                        </Typography>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </Box>
+                                  : "white",
+                              transition: "all 0.3s ease",
+                              ":hover": {
+                                color:
+                                  urlLocation == page.path
+                                    ? "primary.main"
+                                    : "grey",
+                              },
+                              fontWeight: 500,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              pt: 0,
+                            }}
+                          >
+                            {page.name}
+                          </Typography>
+                        </Grid>
+                      ))}
+                    </Grid>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  lg={2}
+                  display={"flex"}
+                  justifyContent={"end"}
+                  alignItems={"center"}
+                >
+                  <Button>
+                    <Typography
+                      fontSize={17}
+                      fontWeight={600}
+                      color={"primary.main"}
+                      display={"flex"}
+                    >
+                      <PhoneIcon /> +94 77 024 2094
+                    </Typography>
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid
-                item
-                lg={2}
-                display={"flex"}
-                justifyContent={"end"}
-                alignItems={"center"}
-              >
-                <Button>
-                  <Typography
-                    fontSize={17}
-                    fontWeight={600}
-                    color={"primary.main"}
-                    display={"flex"}
-                  >
-                    <PhoneIcon /> +94 77 024 2094
-                  </Typography>
-                </Button>
-              </Grid>
-            </Grid>
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

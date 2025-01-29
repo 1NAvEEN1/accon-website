@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import ThemeProvider from "./theme";
 import store from "./app/store";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation";
@@ -55,23 +55,13 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
-  if (spinner) {
-    setTimeout(() => {
-      spinner.style.display = "none";
-      setLoading(false);
-    }, 500);
-  }
   return (
-    !loading && (
       <Provider store={store}>
         <ThemeProvider>
           <LoadingAnimation />
           <RouterProvider router={router} />
         </ThemeProvider>
       </Provider>
-    )
   );
 };
 
