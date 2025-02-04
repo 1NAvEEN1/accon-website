@@ -96,92 +96,91 @@ function MainHeader(props) {
           }}
         >
           <Toolbar disableGutters>
-            <Grid
-              container
-              sx={{
-                display: { xs: "flex", lg: "none" },
-              }}
-            >
-              <Grid
-                item
-                xs={5}
-                pt={1}
-                pl={2}
-                display={"flex"}
-                justifyContent={"center"}
-              >
-                {/* <img src={LogoHeading} /> */}
-                <Box>
-                  <Typography
-                    color={"secondary.main"}
-                    variant="h3"
-                    textAlign={"center"}
-                  >
-                    ACCON
-                  </Typography>
-                  <Typography
-                    color={"primary.main"}
-                    mt={-1}
-                    textAlign={"center"}
-                    fontWeight={500}
-                  >
-                    Engineering PVT
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid
-                item
-                xs={7}
-                display={"flex"}
-                justifyContent={"end"}
-                alignItems={"center"}
-                pr={3}
-              >
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={toggleDrawer}
-                  color="black"
-                >
-                  <MenuRoundedIcon fontSize="large" />
-                </IconButton>
-
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: "block", sm: "none" },
-                  }}
-                >
-                  {props.pages.map((page) => (
-                    <MenuItem
-                      key={page.name}
-                      component={Link}
-                      to={page.path}
-                      onClick={handleCloseNavMenu}
-                    >
-                      <Typography textAlign="center">{page.name}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Grid>
-            </Grid>
             <Box
               sx={{ width: "100%", display: "flex", justifyContent: "center" }}
             >
+              <Grid
+                container
+                sx={{
+                  display: { xs: "flex", lg: "none" },
+                }}
+              >
+                <Grid
+                  item
+                  xs={5}
+                  pt={0.5}
+                  display={"flex"}
+                  justifyContent={"center"}
+                >
+                  {/* <img src={LogoHeading} /> */}
+                  <Box>
+                    <Typography
+                      color={"white"}
+                      variant="h3"
+                      textAlign={"center"}
+                    >
+                      ACCON
+                    </Typography>
+                    <Typography
+                      color={"primary.main"}
+                      mt={-0.6}
+                      textAlign={"center"}
+                      fontWeight={500}
+                    >
+                      Engineering PVT
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  xs={7}
+                  display={"flex"}
+                  justifyContent={"end"}
+                  alignItems={"center"}
+                  pr={3}
+                >
+                  <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={toggleDrawer}
+                    color="black"
+                  >
+                    <MenuRoundedIcon fontSize="large" />
+                  </IconButton>
+
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorElNav}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "left",
+                    }}
+                    open={Boolean(anchorElNav)}
+                    onClose={handleCloseNavMenu}
+                    sx={{
+                      display: { xs: "block", sm: "none" },
+                    }}
+                  >
+                    {props.pages.map((page) => (
+                      <MenuItem
+                        key={page.name}
+                        component={Link}
+                        to={page.path}
+                        onClick={handleCloseNavMenu}
+                      >
+                        <Typography textAlign="center">{page.name}</Typography>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </Grid>
+              </Grid>
               <Grid
                 container
                 sx={{

@@ -17,7 +17,7 @@ const Home1 = () => {
         backgroundPositionX: "center",
         backgroundPositionY: "bottom",
         minHeight: 500,
-        height: "65vh",
+        height: {md:"65vh", xs:"80vh"},
         maxHeight: 1080,
         overflow: "hidden",
       }}
@@ -48,14 +48,23 @@ const Home1 = () => {
               <Typography
                 variant="h1"
                 component="h1"
-                sx={{ fontWeight: "bold", color: "primary.main",letterSpacing: 6 }}
+                sx={{
+                  fontWeight: "bold",
+                  color: "primary.main",
+                  letterSpacing: 6,
+                }}
               >
                 ACCON
               </Typography>
               <Typography
                 variant="h1"
                 component="h1"
-                sx={{ fontWeight: "bold", color: "#FFFFFF", mt: -2 ,letterSpacing: 6 }}
+                sx={{
+                  fontWeight: "bold",
+                  color: "#FFFFFF",
+                  mt: { sm: -2, xs: -1.5 },
+                  letterSpacing: 6,
+                }}
               >
                 ENGINEERING
               </Typography>
@@ -66,6 +75,7 @@ const Home1 = () => {
                   fontWeight: "bold",
                   display: "inline-block",
                   letterSpacing: 3.7,
+                  lineHeight: 1.2,
                 }}
               >
                 <span style={{ color: "#ec8032" }}>BUILDING</span>{" "}
