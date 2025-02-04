@@ -46,7 +46,19 @@ const Home3 = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
         },
@@ -69,11 +81,11 @@ const Home3 = () => {
         justifyContent: "center",
       }}
     >
-      <Box sx={{width: {lg: 1300, md: 900, sm: 600}}}>
+      <Box sx={{ width: { xl: 1340, lg: 1200, md: 900, sm: 600, xs: 350 } }}>
         <Typography variant="h2" fontWeight={800} color={"#131212"}>
           PROJECTS
         </Typography>
-        <Box mt={5} px={2}>
+        <Box mt={5} px={2} width={"100%"}>
           <Slider {...settings}>
             {projects.map((project, index) => (
               <ProjectCard
@@ -89,7 +101,7 @@ const Home3 = () => {
           <Button
             variant="outlined"
             sx={{ px: 4, py: 1 }}
-            onClick={() => navigate("/services")}
+            onClick={() => navigate("/projects")}
           >
             See More
           </Button>
@@ -104,16 +116,16 @@ const ProjectCard = ({ image, title, text }) => {
     <Box
       sx={{
         borderRadius: 2,
-        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         display: "flex",
         alignItems: "end",
         backgroundColor: "#fff",
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",    
+        backgroundRepeat: "no-repeat",
         height: 340,
-        width: 290,
+        width: 280,
+        mx: "auto",
       }}
     >
       <Box
@@ -132,7 +144,7 @@ const ProjectCard = ({ image, title, text }) => {
           <Typography fontWeight={600} mt={2}>
             {title}
           </Typography>
-          <Typography mt={2} fontWeight={300} >
+          <Typography mt={2} fontWeight={300}>
             {text}
           </Typography>
         </Box>

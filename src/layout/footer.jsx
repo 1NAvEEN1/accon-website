@@ -14,14 +14,14 @@ const Footer = ({ pages }) => {
   return (
     <Box
       sx={{
-        bgcolor: "secondary.main",
+        bgcolor: "#131212",
         pt: 5,
         pr: 5,
         pl: 5,
         pb: 5,
       }}
     >
-      <Divider sx={{ bgcolor: "#979797", height: "2px" }} />
+      {/* <Divider sx={{ bgcolor: "#979797", height: "2px" }} /> */}
       <Grid container>
         <Grid
           item
@@ -39,7 +39,7 @@ const Footer = ({ pages }) => {
               mt={-1}
               textAlign={"center"}
               fontWeight={500}
-              variant="h4"
+              variant="h5"
             >
               Engineering PVT
             </Typography>
@@ -162,7 +162,7 @@ const Footer = ({ pages }) => {
         </Grid>
       <Divider sx={{ bgcolor: "#979797" }} />
       <Typography color={"white"} textAlign={"start"} mt={4}>
-        COPYRIGHT ©2024 ACCON - POWERED BY{" "}
+        COPYRIGHT ©2025 ACCON - POWERED BY{" "}
         <a
           href="https://github.com/1NAvEEN1"
           target="_blank"
