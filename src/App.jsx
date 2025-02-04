@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 
 const Layout = Loadable(lazy(() => import("./layout")));
 const Home = Loadable(lazy(() => import("./pages/Home")));
+const Services = Loadable(lazy(() => import("./pages/Services")));
 // const ContactUs = Loadable(lazy(() => import("./pages/ContactUs")));
 // const AboutUs = Loadable(lazy(() => import("./pages/AboutUs")));
 // const KidsPlayArea = Loadable(lazy(() => import("./pages/KidsPlayArea")));
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Home />,
+        element: <Services />,
       },
       {
         path: "/projects",

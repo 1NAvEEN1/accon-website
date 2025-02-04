@@ -11,6 +11,7 @@ const Home1 = () => {
   return (
     <Box
       sx={{
+        mt: 9,
         backgroundImage: `url(${BackGroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
