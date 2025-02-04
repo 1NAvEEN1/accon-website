@@ -13,6 +13,7 @@ import ServiceIcon2 from "../../assets/serviceIcon2.png";
 import Home1 from "./Home1";
 import Home2 from "./Home2";
 import Home3 from "./Home3";
+import Home4 from "./Home4";
 
 const Home = () => {
   AOS.init({ duration: 1000 });
@@ -27,6 +28,7 @@ const Home = () => {
       <Home1 />
       <Home2 />
       <Home3 />
+      <Home4 />
     </Box>
   );
 };
