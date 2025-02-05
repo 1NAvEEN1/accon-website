@@ -3,9 +3,9 @@ import { Box, Typography, Grid } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import BackGroundImage from "../../assets/Services/ServicesBG.jpg";
+import BackGroundImage from "../../assets/Projects/ProjectsBG.jpg";
 
-const Services1 = () => {
+const Projects1 = () => {
   AOS.init({ duration: 1000 });
 
   return (
@@ -53,7 +53,7 @@ const Services1 = () => {
                 }}
                 textAlign={"center"}
               >
-                Our Services
+                Projects
               </Typography>
 
               <Typography
@@ -82,4 +82,4 @@ const Services1 = () => {
     </Box>
   );
 };
-export default Services1;
+export default Projects1;
