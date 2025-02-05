@@ -32,7 +32,7 @@ const Services1 = () => {
           justifyContent: "center",
         }}
       >
-        <Grid container height={"100%"} maxWidth={1800} pt={10}>
+        <Grid container height={"100%"} maxWidth={1800} pt={2}>
           <Grid
             item
             xs={12}
