@@ -69,7 +69,7 @@ const navigate = useNavigate();
           >
             <ServiceCard
               icon={ServiceIcon2}
-              title={"CONCRETE MIXTURE"}
+              title={"CONCRETE SUPPLY"}
               text={
                 " Litora leo senectus suscipit phasellu a lectus. mpot ullamcorper augue. Pellentesque. Commodo vehiculavelia."
               }
