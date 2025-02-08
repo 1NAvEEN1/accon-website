@@ -12,13 +12,14 @@ const Home = Loadable(lazy(() => import("./pages/Home")));
 const Services = Loadable(lazy(() => import("./pages/Services")));
 const Projects = Loadable(lazy(() => import("./pages/Projects")));
 const AboutUs = Loadable(lazy(() => import("./pages/AboutUs")));
-// const ContactUs = Loadable(lazy(() => import("./pages/ContactUs")));
+const Gallery = Loadable(lazy(() => import("./pages/Gallery")));
+const ContactUs = Loadable(lazy(() => import("./pages/ContactUs")));
 // const AboutUs = Loadable(lazy(() => import("./pages/AboutUs")));
 // const KidsPlayArea = Loadable(lazy(() => import("./pages/KidsPlayArea")));
 // const TreeHouses = Loadable(lazy(() => import("./pages/TreeHouses")));
 // const Chalets = Loadable(lazy(() => import("./pages/Chalets")));
 // const TinyHouses = Loadable(lazy(() => import("./pages/TinyHouses")));
-// const Gallery = Loadable(lazy(() => import("./pages/Gallery")));
+
 
 const router = createBrowserRouter([
   {
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Home />,
+        element: <ContactUs />,
       },
       {
         path: "/gallery",
-        element: <Home />,
+        element: <Gallery />,
       },
       {
         path: "/services",
