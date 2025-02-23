@@ -8,7 +8,7 @@ import {
   DialogTitle,
   Button,
   Divider,
-  Grid
+  Grid,
 } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -119,7 +119,7 @@ const Projects2 = () => {
           </IconButton>
         </DialogTitle>
         <Divider />
-        <DialogContent sx={{ height: {xl:500, lg:450}, overflow: "auto" }}>
+        <DialogContent sx={{ height: { xl: 500, lg: 450 }, overflow: "auto" }}>
           <Typography fontWeight={800}>PROJECT DURATION</Typography>
           <Typography mt={0.5}>2023 May - 2024 April</Typography>
 
@@ -140,7 +140,12 @@ const Projects2 = () => {
                     component="img"
                     src={img}
                     alt="Project Image"
-                    sx={{ width:"100%", height: 120, borderRadius: 0.5, objectFit: "cover" }}
+                    sx={{
+                      width: "100%",
+                      height: 120,
+                      borderRadius: 0.5,
+                      objectFit: "cover",
+                    }}
                   />
                 </Grid>
               ))}
@@ -173,7 +178,9 @@ const Projects2 = () => {
             Previous
           </Button>
           <Box>
-            <Typography>{selectedProject + 1} of {projects.length}</Typography>
+            <Typography>
+              {selectedProject + 1} of {projects.length}
+            </Typography>
           </Box>
           <Button
             onClick={handleNext}
@@ -194,7 +201,7 @@ const ProjectCard = ({ project, onOpen }) => {
       sx={{
         borderRadius: 2,
         display: "flex",
-        alignItems: "end",
+        // alignItems: "end",
         backgroundColor: "#fff",
         backgroundImage: `url(${project.image})`,
         backgroundSize: "cover",
@@ -210,7 +217,7 @@ const ProjectCard = ({ project, onOpen }) => {
           borderRadius: 2,
           background:
             "linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
-          display: "flex",
+          display: { xs: "flex-row", md: "flex" },
           alignItems: "center",
           height: "100%",
           width: "100%",
@@ -218,26 +225,55 @@ const ProjectCard = ({ project, onOpen }) => {
           px: 5,
         }}
       >
-        <Box color={"#fff"} mb={1}>
-          <Typography variant="h6" fontWeight={600} mt={2}>
-            {project.title}
-          </Typography>
-          <Typography mt={2} fontWeight={300} maxWidth={550}>
-            {project.text}
-          </Typography>
-        </Box>
-        <IconButton
-          onClick={onOpen}
-          size="large"
+        <Box
           sx={{
-            bgcolor: "primary.main",
-            ml: "auto",
-            color: "white",
-            "&:hover": { backgroundColor: "primary.dark" },
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          <ArrowForwardIosIcon fontSize="large" />
-        </IconButton>
+          <Box color={"#fff"} mb={1}>
+            <Typography variant="h6" fontWeight={600} mt={2}>
+              {project.title}
+            </Typography>
+            <Typography mt={2} fontWeight={300} maxWidth={550}>
+              {project.text}
+            </Typography>
+          </Box>
+          <Box>
+            <IconButton
+              onClick={onOpen}
+              size="large"
+              sx={{
+                bgcolor: "primary.main",
+                color: "white",
+                "&:hover": { backgroundColor: "primary.dark" },
+                display: { xs: "none", md: "block" },
+                width: 58,
+                height: 58,
+              }}
+            >
+              <ArrowForwardIosIcon fontSize="large" />
+            </IconButton>
+          </Box>
+        </Box>
+        <Box display={{ md: "none", xs: "flex" }}>
+          <IconButton
+            onClick={onOpen}
+            size="medium"
+            sx={{
+              bgcolor: "primary.main",
+              ml: "auto",
+              color: "white",
+              "&:hover": { backgroundColor: "primary.dark" },
+              mt: 5,
+              mx: "auto",
+            }}
+          >
+            <ArrowForwardIosIcon fontSize="large" />
+          </IconButton>
+        </Box>
       </Box>
     </Box>
   );
