@@ -20,6 +20,10 @@ import Rathmalana from "../../assets/Projects/Rathmalana.jpg";
 import HoranaAguruwathota from "../../assets/Projects/Horana-Anguruwathota.jpg";
 import HDDES from "../../assets/Projects/HDDES.jpg";
 import Kottawa from "../../assets/Projects/Kottawa.jpg";
+import Angunakolapalassa from "../../assets/Projects/Angunakolapalassa.jpg";
+import Aparakka from "../../assets/Projects/Aparakka.jpg";
+import ArmyRockhouse from "../../assets/Projects/ArmyRockhouse.jpg";
+import DiyagahaRoad from "../../assets/Projects/DiyagahaRoad.jpg";
 
 const projects = [
   {
@@ -45,6 +49,30 @@ const projects = [
     title: "Kottawa–Piliyandala Road",
     text: "Located in the heart of Downtown Metro City, this project focuses on upgrading a busy urban intersection to improve traffic flow and safety. The work includes redesigning the intersection layout, installing new traffic signals, and enhancing pedestrian crossings.",
     gallery: [Kottawa, Rathmalana, HoranaAguruwathota, HDDES],
+  },
+  {
+    image: Angunakolapalassa,
+    title: "Angunakolapalassa Interchange",
+    text: "On State Highway 123, we’re constructing a 10-mile highway, including earthwork, paving, drainage, and signage installation. This 12-month project faces challenges such as managing traffic, environmental considerations, and meeting strict quality standards.",
+    gallery: [Angunakolapalassa, Aparakka, ArmyRockhouse, DiyagahaRoad],
+  },
+  {
+    image: Aparakka,
+    title: "Aparakka Interchange to Ingurupaththara Junction",
+    text: "In Cityville, we’re rehabilitating a 2-mile stretch of Main Street. The project involves resurfacing, pavement repairs, and new road markings over 6 months. Challenges include minimizing disruptions to local businesses and residents, and working around underground utilities.",
+    gallery: [Aparakka, Angunakolapalassa, ArmyRockhouse, DiyagahaRoad],
+  },
+  {
+    image: ArmyRockhouse,
+    title: "Army Rockhouse Basketball Court",
+    text: "At an industrial park, we’re building a new access road to improve transportation. The project covers grading, paving, and drainage over 8 months. Challenges include operating in a busy industrial area and coordinating with multiple stakeholders.",
+    gallery: [ArmyRockhouse, Angunakolapalassa, Aparakka, DiyagahaRoad],
+  },
+  {
+    image: DiyagahaRoad,
+    title: "Asphalte Laying Thun Bodhiya Diyagaha Road",
+    text: "Located in the heart of Downtown Metro City, this project focuses on upgrading a busy urban intersection to improve traffic flow and safety. The work includes redesigning the intersection layout, installing new traffic signals, and enhancing pedestrian crossings.",
+    gallery: [DiyagahaRoad, Angunakolapalassa, Aparakka, ArmyRockhouse],
   },
 ];
 
@@ -98,31 +126,43 @@ const Projects2 = () => {
         slotProps={{
           backdrop: {
             sx: {
-              background: "rgba(0,0,0,0.4)",
-              backdropFilter: "blur(3px)",
+              background: "rgba(255, 255, 255, 0.1)",
+              backdropFilter: "blur(4px)",
             },
           },
         }}
         onClose={handleClose}
         maxWidth="md"
         fullWidth
+        sx={{
+          "& .MuiPaper-root": {
+            background: "#131212",
+          },
+        }}
       >
-        <DialogTitle>
+        <DialogTitle sx={{ bgcolor: "#131212", color: "#fff" }}>
           <Typography variant="h5" sx={{ mb: 2, mt: -1 }}>
             {projects[selectedProject].title}
           </Typography>
           <IconButton
             onClick={handleClose}
-            sx={{ position: "absolute", right: 10, top: 10 }}
+            size="small"
+            sx={{ position: "absolute", right: 10, top: 10, color: "#fff" }}
           >
-            <CloseIcon />
+            <CloseIcon fontSize="large" />
           </IconButton>
         </DialogTitle>
-        <Divider />
-        <DialogContent sx={{ height: { xl: 500, lg: 450 }, overflow: "auto" }}>
+        <Box bgcolor={"primary.main"} height={1.5}>
+        </Box>
+        <DialogContent
+          sx={{
+            height: { xl: 500, lg: 450 },
+            overflow: "auto",
+            bgcolor: "#ffff",
+          }}
+        >
           <Typography fontWeight={800}>PROJECT DURATION</Typography>
           <Typography mt={0.5}>2023 May - 2024 April</Typography>
-
           <Typography fontWeight={800} mt={2}>
             DETAILS
           </Typography>
@@ -161,13 +201,16 @@ const Projects2 = () => {
             ))} */}
           </Box>
         </DialogContent>
-        <Divider />
+        <Box bgcolor={"#fff"}>
+          <Divider />
+        </Box>
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             p: 1,
+            bgcolor: "#fff",
           }}
         >
           <Button
