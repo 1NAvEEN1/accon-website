@@ -96,7 +96,7 @@ const Footer = ({ pages }) => {
             <Typography color={"white"}>SOCIAL MEDIA</Typography>
             <IconButton>
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/16TNMHUnDR/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -206,9 +206,7 @@ const Contacts = () => {
           justifyContent={"start"}
           alignItems={"center"}
         >
-          <Typography>
-            345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
-          </Typography>
+          <Typography>36/5, Sri Somananda Mawatha, Horana</Typography>
         </Grid>
         <Grid
           item
@@ -233,7 +231,30 @@ const Contacts = () => {
           justifyContent={"start"}
           alignItems={"center"}
         >
-          <Typography>(123) 456-7890</Typography>
+          <Typography mr={1}>
+            <a
+              href="tel:+940342267509"
+              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+            >
+              (034) 226 7509
+            </a>
+          </Typography>/
+          <Typography ml={1} mr={1}>
+            <a
+              href="tel:+940777489342"
+              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+            >
+              (077) 748 9342
+            </a>
+          </Typography>/
+          <Typography ml={1}>
+            <a
+              href="tel:+940773992374"
+              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+            >
+              (077) 399 2374
+            </a>
+          </Typography>
         </Grid>
         <Grid
           item
@@ -258,7 +279,14 @@ const Contacts = () => {
           justifyContent={"start"}
           alignItems={"center"}
         >
-          <Typography>acconengineering@gmail.com</Typography>
+          <Typography>
+            <a
+              href="mailto:info@accon.lk"
+              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+            >
+              info@accon.lk
+            </a>
+          </Typography>
         </Grid>
       </Grid>{" "}
     </Box>

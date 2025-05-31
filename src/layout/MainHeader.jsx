@@ -278,8 +278,11 @@ function MainHeader(props) {
                       fontWeight={600}
                       color={"primary.main"}
                       display={"flex"}
+                      gap={1}
+                      alignItems={"center"}
                     >
-                      <PhoneIcon /> +94 77 024 2094
+                      +94 342 267 509
+                      <PhoneIcon />
                     </Typography>
                   </Button>
                 </Grid>
