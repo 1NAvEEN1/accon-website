@@ -2,7 +2,7 @@
   "name": "rukmadura_website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://rukmadura.lk/",
+  "homepage": "https://accon.lk/",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
