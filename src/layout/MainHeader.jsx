@@ -325,7 +325,8 @@ function MainHeader(props) {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Box>
+            <Box component="img" sx={{ height: 80 }} src={Logo} />
+            {/* <Box>
               <Typography
                 color={"secondary.main"}
                 variant="h2"
@@ -342,7 +343,7 @@ function MainHeader(props) {
               >
                 Engineering PVT
               </Typography>
-            </Box>
+            </Box> */}
           </Grid>
           <Grid
             item

@@ -176,7 +176,7 @@ const Footer = ({ pages }) => {
             rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "#FE760F" }}
           >
-            1NAvEEN1
+            NAVEEN
           </a>
         </Typography>
       </Box>
