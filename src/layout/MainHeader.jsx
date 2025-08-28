@@ -14,7 +14,7 @@ import {
   Button,
 } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import LogoHeading from "../assets/LogoHeading.png";
+import Logo from "../assets/Logo.png";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -112,8 +112,8 @@ function MainHeader(props) {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  {/* <img src={LogoHeading} /> */}
-                  <Box>
+                  <Box component="img" sx={{ height: 52 }} src={Logo} />
+                  {/* <Box>
                     <Typography
                       color={"white"}
                       variant="h3"
@@ -129,7 +129,7 @@ function MainHeader(props) {
                     >
                       Engineering PVT
                     </Typography>
-                  </Box>
+                  </Box> */}
                 </Grid>
                 <Grid
                   item
@@ -192,8 +192,8 @@ function MainHeader(props) {
               >
                 <Grid item lg={2} pl={2}>
                   <Box>
-                    {/* <img src={LogoHeading} /> */}
-                    <Typography
+                    <Box component="img" sx={{ height: 62 }} src={Logo} />
+                    {/* <Typography
                       color={"primary.main"}
                       variant="h3"
                       textAlign={"center"}
@@ -207,7 +207,7 @@ function MainHeader(props) {
                       fontWeight={500}
                     >
                       Engineering PVT
-                    </Typography>
+                    </Typography> */}
                   </Box>
                 </Grid>
                 <Grid

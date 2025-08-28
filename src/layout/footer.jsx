@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
-import LogoFooter from "../assets/LogoFooter.png";
+import Logo from "../assets/Logo.png";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -15,10 +15,10 @@ const Footer = ({ pages }) => {
     <Box
       sx={{
         bgcolor: "#131212",
-        pt: 5,
+        pt: { md: 5, xs: 0 },
         pr: 5,
         pl: 5,
-        pb: 5,
+        pb: { md: 5, xs: 8 },
         display: "flex",
         justifyContent: "center",
       }}
@@ -28,8 +28,17 @@ const Footer = ({ pages }) => {
         <Grid container>
           <Grid item xs={12} lg={3} mt={5}>
             {/* <img src={LogoFooter} /> */}
-            <Box>
-              <Typography color={"white"} variant="h2" textAlign={"center"}>
+            <Box
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Box
+                component="img"
+                sx={{ height: { xs: 70, lg: 100 } }}
+                src={Logo}
+              />
+              {/* <Typography color={"white"} variant="h2" textAlign={"center"}>
                 ACCON
               </Typography>
               <Typography
@@ -40,7 +49,7 @@ const Footer = ({ pages }) => {
                 variant="h5"
               >
                 Engineering PVT
-              </Typography>
+              </Typography> */}
             </Box>
             <Box display={{ lg: "none", xs: "flex" }} mt={2}>
               <Contacts />
@@ -214,43 +223,61 @@ const Contacts = () => {
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
+          mb={{ xs: -1.5, sm: 0 }}
         >
-          <IconButton>
-            <a href="tel:+94770491496">
-              <PhoneIcon
-                sx={{ color: "white", ":hover": { color: "primary.main" } }}
-                fontSize="large"
-              />
-            </a>
-          </IconButton>
+          <PhoneIcon
+            sx={{
+              color: "white",
+              ":hover": { color: "primary.main" },
+              mt: { xs: -1.5, sm: 0 },
+            }}
+            fontSize="large"
+          />
         </Grid>
         <Grid
           item
           xs={10.5}
-          display={"flex"}
+          display={{ sm: "flex", xs: "block" }}
           justifyContent={"start"}
           alignItems={"center"}
+          mb={{ xs: -1.5, sm: 0 }}
         >
-          <Typography mr={1}>
-            <a
-              href="tel:+940342267509"
-              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
-            >
-              (034) 226 7509
-            </a>
-          </Typography>/
-          <Typography ml={1} mr={1}>
-            <a
-              href="tel:+940777489342"
-              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
-            >
-              (077) 748 9342
-            </a>
-          </Typography>/
-          <Typography ml={1}>
+          <Box display={"flex"}>
+            <Typography mr={1}>
+              <a
+                href="tel:+940342267509"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  ":hover": { color: "primary.main" },
+                }}
+              >
+                (034) 226 7509
+              </a>
+            </Typography>
+            /
+            <Typography ml={1} mr={1}>
+              <a
+                href="tel:+940777489342"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  ":hover": { color: "primary.main" },
+                }}
+              >
+                (077) 748 9342
+              </a>
+            </Typography>
+          </Box>
+          <Box display={{ xs: "none", sm: "block" }}>/</Box>
+          <Typography ml={{ sm: 1, xs: 0 }}>
             <a
               href="tel:+940773992374"
-              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                ":hover": { color: "primary.main" },
+              }}
             >
               (077) 399 2374
             </a>
@@ -282,7 +309,11 @@ const Contacts = () => {
           <Typography>
             <a
               href="mailto:info@accon.lk"
-              style={{ textDecoration: "none", color: "inherit", ":hover": { color: "primary.main" } }}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                ":hover": { color: "primary.main" },
+              }}
             >
               info@accon.lk
             </a>
