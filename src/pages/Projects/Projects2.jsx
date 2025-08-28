@@ -179,7 +179,8 @@ const Projects2 = () => {
                   <Box
                     component="img"
                     src={img}
-                    alt="Project Image"
+                    alt={`${projects[selectedProject].title} - Construction project by Accon Engineering`}
+                    loading="lazy"
                     sx={{
                       width: "100%",
                       height: 120,
@@ -195,7 +196,7 @@ const Projects2 = () => {
                 key={i}
                 component="img"
                 src={img}
-                alt="Project Image"
+                alt={`${projects[selectedProject].title} - Construction project gallery image by Accon Engineering`}
                 sx={{ width: 100, height: 100, borderRadius: 2 }}
               />
             ))} */}

@@ -112,7 +112,7 @@ function MainHeader(props) {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  <Box component="img" sx={{ height: 52 }} src={Logo} />
+                  <Box component="img" sx={{ height: 52 }} src={Logo} alt="Accon Engineering - Road Construction & Infrastructure Services in Sri Lanka" />
                   {/* <Box>
                     <Typography
                       color={"white"}
@@ -192,7 +192,7 @@ function MainHeader(props) {
               >
                 <Grid item lg={2} pl={2}>
                   <Box>
-                    <Box component="img" sx={{ height: 62 }} src={Logo} />
+                    <Box component="img" sx={{ height: 62 }} src={Logo} alt="Accon Engineering Logo" />
                     {/* <Typography
                       color={"primary.main"}
                       variant="h3"
@@ -325,7 +325,7 @@ function MainHeader(props) {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Box component="img" sx={{ height: 80 }} src={Logo} />
+            <Box component="img" sx={{ height: 80 }} src={Logo} alt="Accon Engineering Logo" />
             {/* <Box>
               <Typography
                 color={"secondary.main"}

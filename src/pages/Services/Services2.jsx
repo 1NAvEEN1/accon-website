@@ -96,6 +96,8 @@ const ServiceCard = ({ image, title, text }) => {
           component={"img"}
           src={image}
           sx={{ borderRadius: "12px 12px 0 0" }}
+          alt={`${title} - Professional ${title.toLowerCase()} services by Accon Engineering`}
+          loading="lazy"
         />
       </Grid>
       <Grid

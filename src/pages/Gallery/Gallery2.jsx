@@ -45,7 +45,8 @@ const Gallery2 = () => {
             <Box
               component="img"
               src={image.src}
-              alt={`Gallery Image ${index + 1}`}
+              alt={`Accon Engineering construction project gallery image ${index + 1} - Road construction and infrastructure development work`}
+              loading="lazy"
               sx={{
                 width: "100%",
                 height: "100%",

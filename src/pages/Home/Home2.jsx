@@ -119,7 +119,7 @@ const ServiceCard = ({ icon, title, text }) => {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Box component={"img"} src={icon} width={64} mt={0.5} />
+        <Box component={"img"} src={icon} width={64} mt={0.5} alt={`${title} service icon - Accon Engineering`} />
       </Grid>
       <Grid
         item

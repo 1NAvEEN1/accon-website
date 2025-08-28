@@ -134,7 +134,7 @@ const InfoCard = ({ icon, title, text }) => {
         <Box
           component="img"
           src={icon}
-          alt={title}
+          alt={`${title} icon - Accon Engineering commitment to ${title.toLowerCase()}`}
           sx={{
             mb: 0.5,
           }}

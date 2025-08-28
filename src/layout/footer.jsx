@@ -37,6 +37,7 @@ const Footer = ({ pages }) => {
                 component="img"
                 sx={{ height: { xs: 70, lg: 100 } }}
                 src={Logo}
+                alt="Accon Engineering Logo"
               />
               {/* <Typography color={"white"} variant="h2" textAlign={"center"}>
                 ACCON

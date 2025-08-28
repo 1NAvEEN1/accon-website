@@ -38,7 +38,7 @@ const AboutUs2 = () => {
             width={"100%"}
             pr={5}
           >
-            <Box component={"img"} src={AboutUs2Image} height={"100%"} mr={2} />
+            <Box component={"img"} src={AboutUs2Image} height={"100%"} mr={2} alt="Accon Engineering team and construction projects showcasing our expertise" loading="lazy" />
             {/* <Box
               sx={{ bgcolor: "lightgrey", height: "100%", width: "100%" }}
             ></Box> */}
